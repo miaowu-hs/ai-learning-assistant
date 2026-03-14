@@ -1,0 +1,10 @@
+Document count: {documentCount}
+QA count: {qaCount}
+Practice count: {practiceCount}
+Accuracy: {accuracy}
+
+Recent wrong knowledge points:
+{wrongKnowledgePoints}
+
+Output requirements:
+{formatInstructions}

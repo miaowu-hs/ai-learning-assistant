@@ -1,0 +1,8 @@
+Document title: {documentTitle}
+Requested question count: {questionCount}
+
+Reference material:
+{chunkText}
+
+Output requirements:
+{formatInstructions}

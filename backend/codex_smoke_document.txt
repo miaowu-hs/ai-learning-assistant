@@ -1,0 +1,4 @@
+Spring Boot is a Java framework.
+JWT is used for authentication.
+RAG uses retrieved chunks as context.
+Practice questions can be generated from the document.

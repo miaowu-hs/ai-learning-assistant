@@ -1,0 +1,6 @@
+Spring Boot helps build Java backend applications.
+JWT provides stateless authentication with tokens.
+RAG retrieves related document chunks and sends them as context to the model.
+Practice modules can generate SINGLE_CHOICE, TRUE_FALSE, and SHORT_ANSWER questions.
+Wrong answers should be recorded into a wrong question book for review.
+Learning reports should count documents, QA sessions, practice attempts, and accuracy.

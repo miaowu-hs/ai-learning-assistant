@@ -1,0 +1,8 @@
+Document title: {documentTitle}
+Document type: {fileType}
+
+Relevant content:
+{chunkText}
+
+Output requirements:
+{formatInstructions}

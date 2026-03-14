@@ -1,0 +1,77 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ai-learning-assistant
+  ai:
+    openai:
+      api-key: ${DASHSCOPE_API_KEY:}
+      chat:
+        base-url: ${DASHSCOPE_BASE_URL:https://coding.dashscope.aliyuncs.com}
+        completions-path: ${DASHSCOPE_CHAT_COMPLETIONS_PATH:/v1/chat/completions}
+        options:
+          model: ${DASHSCOPE_MODEL:qwen3.5-plus}
+          temperature: 0.2
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/ai_learning_assistant?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true}
+    username: ${MYSQL_USERNAME:root}
+    password: "${MYSQL_PASSWORD:789***tyu}"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    time-zone: Asia/Shanghai
+    date-format: yyyy-MM-dd HH:mm:ss
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  http:
+    client:
+      factory: jdk
+
+mybatis-plus:
+  type-aliases-package: com.ailearningassistant
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+jwt:
+  secret-key: "${JWT_SECRET_KEY:ai-learning-assistant-secret-key-2026-safe}"
+  expiration: 86400000
+  issuer: ai-learning-assistant
+
+document:
+  storage:
+    upload-dir: uploads
+    allowed-extensions:
+      - pdf
+      - docx
+      - txt
+      - md
+  processing:
+    chunk-size: 1000
+
+rag:
+  retrieval:
+    top-k: 3
+    min-score: 1
+
+app:
+  ai:
+    prompts-path: classpath:/prompts/
+    summary-chunk-limit: 6
+    practice-chunk-limit: 8
+    suggestion-wrong-point-limit: 5
+
+logging:
+  level:
+    com.ailearningassistant: info

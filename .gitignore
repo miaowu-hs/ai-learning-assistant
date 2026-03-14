@@ -1,0 +1,9 @@
+backend/target/
+backend/uploads/
+front/node_modules/
+front/dist/
+front/.vite/
+front/.tmp/
+*.log
+.DS_Store
+Thumbs.db

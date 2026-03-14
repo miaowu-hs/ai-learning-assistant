@@ -1,0 +1,10 @@
+Document title: {documentTitle}
+Question: {question}
+
+Retrieved references:
+{referencesText}
+
+Additional prompt context:
+{promptContext}
+
+Provide a clear answer in plain text.

@@ -1,0 +1,8 @@
+Question stem: {stem}
+Reference answer: {correctAnswer}
+Explanation: {explanation}
+Max score: {maxScore}
+Student answer: {userAnswer}
+
+Output requirements:
+{formatInstructions}
