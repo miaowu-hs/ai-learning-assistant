@@ -149,7 +149,6 @@ void loadReport()
               <div class="dashboard-card__header">
                 <div>
                   <h3>AI 学习建议</h3>
-                  <p>直接来自 `/api/reports/me` 返回值。</p>
                 </div>
               </div>
             </template>

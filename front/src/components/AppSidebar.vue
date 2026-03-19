@@ -69,10 +69,6 @@ function handleSelect(path: string): void {
       </el-menu-item>
     </el-menu>
 
-    <div v-if="!props.collapsed" class="sidebar__footer">
-      <p>只展示后端已支持主功能</p>
-      <span>问答会话列表与练习列表接口当前未开放</span>
-    </div>
   </div>
 </template>
 
@@ -139,33 +135,6 @@ function handleSelect(path: string): void {
 .sidebar__menu :deep(.el-menu-item.is-active) {
   color: #f8fbff;
   background: linear-gradient(90deg, rgba(59, 130, 246, 0.32), rgba(59, 130, 246, 0.08));
-}
-
-.sidebar__footer {
-  margin-top: auto;
-  padding: 16px;
-  border-radius: 20px;
-  background: rgba(15, 23, 42, 0.45);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-}
-
-.sidebar__footer p,
-.sidebar__footer span {
-  margin: 0;
-}
-
-.sidebar__footer p {
-  font-size: 13px;
-  font-weight: 700;
-  color: #f8fbff;
-}
-
-.sidebar__footer span {
-  display: block;
-  margin-top: 6px;
-  font-size: 12px;
-  line-height: 1.6;
-  color: rgba(219, 234, 254, 0.72);
 }
 
 .is-collapsed .sidebar__brand {
