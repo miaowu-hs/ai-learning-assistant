@@ -1,5 +1,7 @@
 backend/target/
 backend/uploads/
+backend/.env
+backend/.env.local
 front/node_modules/
 front/dist/
 front/.vite/

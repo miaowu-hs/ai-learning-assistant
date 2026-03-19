@@ -2,6 +2,10 @@ server:
   port: 8080
 
 spring:
+  config:
+    import:
+      - optional:file:.env[.properties]
+      - optional:file:../.env[.properties]
   application:
     name: ai-learning-assistant
   ai:
@@ -15,8 +19,8 @@ spring:
           temperature: 0.2
   datasource:
     url: ${MYSQL_URL:jdbc:mysql://localhost:3306/ai_learning_assistant?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true}
-    username: ${MYSQL_USERNAME:root}
-    password: "${MYSQL_PASSWORD:789***tyu}"
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jackson:
     time-zone: Asia/Shanghai
@@ -45,7 +49,7 @@ mybatis-plus:
       logic-not-delete-value: 0
 
 jwt:
-  secret-key: "${JWT_SECRET_KEY:ai-learning-assistant-secret-key-2026-safe}"
+  secret-key: ${JWT_SECRET_KEY}
   expiration: 86400000
   issuer: ai-learning-assistant
 
